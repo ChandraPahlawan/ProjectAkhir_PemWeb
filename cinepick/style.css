@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #151515;
+}
+
+/* Desktop Navbar */
+.navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #121212;
+}
+
+.menu-container,
+.search-container,
+.login-btn {
+  display: inline-block;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-list-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile Navbar */
+.navbar-mobile {
+  display: none;
+  padding: 10px 20px;
+  background-color: #121212;
+}
+
+
+.menu-container-mobile {
+  display: none;
+  background-color: #121212;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  top: 60px; /* Adjust according to the header height */
+  left: 0;
+  z-index: 2;
+}
+
+.search-container-mobile {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  /* background-color: #222; */
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 50px;
+}
+
+.search-container-mobile input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #333;
+  outline: none;
+}
+
+.search-container-mobile button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container-mobile button:hover {
+  background-color: #3da200;
+}
+
+.menu-list-mobile {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list-mobile li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu-list-mobile a,
+.menu-list-mobile button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  font-size: 30px;
+  color: #4dbf00;
+}
+
+.menu-container {
+  flex: 6;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+.menu-list-item a {
+  color: white; /* Ganti warna sesuai desain */
+  text-decoration: none !important; /* Tambahkan !important untuk memastikan efek ini diterapkan */
+  padding: 10px 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.menu-list-item a:hover {
+  color: #ffcc00; /* Warna teks saat hover */
+  transition: color 0.3s ease; /* Animasi saat hover */
+}
+
+.menu-list-item.active a {
+  color: #ffcc00; /* Warna teks untuk item aktif */
+}
+
+/* Styling untuk elemen pencarian */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 300px;
+}
+
+.search-container input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #333;
+  outline: none;
+}
+
+.search-container button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #3da200;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.profile-text-link:hover {
+  color: #3da200;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: goldenrod;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+}
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.featured-button {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.movie-list-container {
+  padding: 0 20px;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: lightgray;
+  opacity: 0.7;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 10; /* Memastikan panah berada di atas konten lainnya */
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px; /* Tambahkan padding bawah untuk ruang scroll */
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+  flex-shrink: 0; /* Menjaga ukuran tetap agar tidak menyusut */
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.login-btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 30px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ad0909;
+  border-color: #444444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* aboutme */
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #4dbf00;
+  width: 100%;
+  max-width: 900px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #4dbf00;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}

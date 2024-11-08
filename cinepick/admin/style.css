@@ -1,0 +1,203 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+/* Mengatur gaya dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000 ;
+} 
+
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #333333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #333333 ;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  margin-left: 100px;
+  color: #4dbf00;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logout-btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.logout-btn:hover {
+  background-color: #ad0909;
+}
+
+/* .sidebar {
+    background-color: #1c1f23;
+    grid-area: side;
+} */
+
+/* Mengatur tata letak main dan card */
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  margin-top: 100px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.icon-text {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+
+.card:nth-child(1) {
+    grid-area: c1;
+}
+
+.card:nth-child(2) {
+    grid-area: c2;
+}
+
+.card:nth-child(3) {
+    grid-area: c3;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;      
+    justify-content: center;   
+    height: 40vh;             
+}
+
+.icon {
+    max-width: 100%;  
+    height: auto;   
+    display: block;   
+    margin: 0 auto;   
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Media query untuk layar lebih kecil */
+@media (max-width: 768px) {
+    
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto 1fr;
+        grid-template-areas:
+            "header"
+            "side"
+            "main";
+    }
+    .sidebar {
+        grid-area: side;
+        height: auto; /* Sesuaikan tinggi sidebar */
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: initial;
+    }
+
+    .card {
+        grid-area: initial !important;
+        width: 100%; /* Lebar penuh untuk kartu */
+    }
+
+    .center-container {
+        height: auto;       
+        padding: 20px;
+    }
+}
+
+/* Media query untuk layar yang sangat kecil
+@media (max-width: 480px) {
+    .main {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+} */
+
+
+
